@@ -1,6 +1,4 @@
-﻿using System.Net;
-using System.Net.Http;
-using System.Net.Http.Headers;
+﻿using B3PricingMonitor;
 
 
 var pricingToMonitor = args[0];

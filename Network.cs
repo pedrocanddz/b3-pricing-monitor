@@ -1,12 +1,10 @@
-using System.Net;
-using Microsoft.VisualBasic;
-using System.Net.Http.Headers;
-using System.Text.Json;
-using System.Net.Http.Json;
+namespace B3PricingMonitor;
 
+using System.Net.Http.Headers;
+using System.Net.Http.Json;
 public class Network
 {
-    HttpClient Client;
+    public HttpClient Client;
     public Network(string apikey)
     {
         this.Client = new HttpClient();
