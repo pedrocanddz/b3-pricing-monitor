@@ -3,11 +3,13 @@ public class StockAlertObserver : IObserver<Stock>
 {
     public decimal LowPrice {get;set;}
     public decimal HighPrice {get; set;}
+    public List<String> Emails{get; set;} = new();
 
-    public StockAlertObserver(decimal lowPrice, decimal highPrice)
+    public StockAlertObserver(decimal lowPrice, decimal highPrice, List<String> emails)
     {
         LowPrice = lowPrice;
         HighPrice = highPrice;
+        Emails.AddRange(emails);
     }
 
     public void OnCompleted()
