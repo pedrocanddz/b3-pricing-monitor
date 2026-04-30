@@ -25,7 +25,7 @@ public class StockAlertObserver : IObserver<Stock>
         if(value.RegularMarketPrice > this.HighPrice)
             Console.WriteLine("Valor passou do Limite superior. Disparar email");
             
-        if(value.RegularMarketPrice > this.LowPrice)
+        if(value.RegularMarketPrice < this.LowPrice)
             Console.WriteLine("Valor passou do Limite inferior. Disparar email");
     }
 }

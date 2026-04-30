@@ -11,8 +11,16 @@ public sealed class StockMonitor : IObservable<Stock>
 
         return new Unsubscriber<Stock>(_observers, observer);
     }
+
+    public void Notify(Stock stock)
+    {
+        foreach(var obs in _observers)
+            obs.OnNext(stock);        
+    }
+    
 }
 
+//Creating Generic Structure for Unsubscriber
 internal class Unsubscriber<T> : IDisposable
     {
         private readonly List<IObserver<T>> _observers;
