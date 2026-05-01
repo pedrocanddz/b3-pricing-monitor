@@ -2,10 +2,10 @@ namespace B3PricingMonitor;
 
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
-public class Network
+public class NetworkService
 {
     public HttpClient Client;
-    public Network(string apikey)
+    public NetworkService(string apikey)
     {
         this.Client = new HttpClient();
         this.Client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apikey);
